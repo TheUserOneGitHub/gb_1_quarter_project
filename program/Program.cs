@@ -2,8 +2,8 @@
 {
     while (n == 0 || n < 0)
     {
-        Console.WriteLine("You have entered 0 or less, there is nothing to be checked");
-        Console.WriteLine("Enter how many elemets you need to check (input an integer)");
+        Console.WriteLine("You have entered 0 (zero) or less, there is nothing to check");
+        Console.WriteLine("Enter how many 'words' (word, number, symbol, etc) you need to check (input an integer)");
         n = Convert.ToInt32(Console.ReadLine());
     }
     return n;
@@ -27,7 +27,7 @@ void PrintArray(string[] array)
 
 
 
-Console.WriteLine("Enter how many elemets you need to check (input an integer)");
+Console.WriteLine("Enter how many 'words' (word, number, symbol, etc) you need to check (input an integer)");
 int n = Convert.ToInt32(Console.ReadLine());
 int k = n;
 n = CheckN(n);
@@ -42,7 +42,7 @@ while (i < n)
     i++;
 }
 
-Console.Write($"You have entered: ");
+Console.Write($"Your 'word(s)': ");
 PrintArray(array);
 
 i = 0;
@@ -62,7 +62,7 @@ int d = n - k;
 Array.Resize(ref arrayFinal, arrayFinal.Length - d);
 
 if (k == 0)
-    Console.WriteLine("there is nothing less or equal to 3 symbols");
+    Console.WriteLine("There are no 'words' less than or equal to 3 characters");
 
-Console.Write($"Total words with 3 symbols or less is {k}: ");
+Console.Write($"The total number of 'words' containing 3 characters or less is {k}: ");
 PrintArray(arrayFinal);
