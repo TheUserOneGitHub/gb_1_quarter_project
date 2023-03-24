@@ -29,8 +29,8 @@ void PrintArray(string[] array)
 
 Console.WriteLine("Enter how many 'words' (word, number, symbol, etc) you need to check (input an integer)");
 int n = Convert.ToInt32(Console.ReadLine());
-int k = n;
 n = CheckN(n);
+int k = n;
 string[] array = new string[n];
 string[] arrayFinal = new string[k];
 
@@ -42,7 +42,7 @@ while (i < n)
     i++;
 }
 
-Console.Write($"Your 'word(s)': ");
+Console.Write($"Your word(s): ");
 PrintArray(array);
 
 i = 0;
@@ -63,6 +63,8 @@ Array.Resize(ref arrayFinal, arrayFinal.Length - d);
 
 if (k == 0)
     Console.WriteLine("There are no 'words' less than or equal to 3 characters");
-
-Console.Write($"The total number of 'words' containing 3 characters or less is {k}: ");
-PrintArray(arrayFinal);
+else
+{
+    Console.Write($"The total number of 'words' containing 3 characters or less is {k}: ");
+    PrintArray(arrayFinal);
+}
