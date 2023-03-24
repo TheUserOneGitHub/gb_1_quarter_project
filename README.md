@@ -1,4 +1,5 @@
 Описание содержимого репозитория gb_1_quarter_project (https://github.com/TheUserOneGitHub/gb_1_quarter_project.git):
+
 program.cs - содержит код по решению задачи (находится в папке program)
 block diagram.vsdx - блок-схема алгоритма (файл Microsoft VISIO)
 block diagram.pdf - блок-схема алгоритма (с расширением .pdf)
