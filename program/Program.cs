@@ -32,7 +32,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 int k = n;
 n = CheckN(n);
 string[] array = new string[n];
-string[] arrayTemp = new string[k];
+string[] arrayFinal = new string[k];
 
 Console.WriteLine("Type a 'word' (word, number, symbol, etc) you want to check and press enter one by one");
 int i = 0;
@@ -52,21 +52,14 @@ while (i < n)
 {
     if (array[i].Length <= 3)
     {
-        arrayTemp[k] = array[i];
+        arrayFinal[k] = array[i];
         k++;
     }
     i++;
 }
 
-Console.WriteLine($"arrayTemp.Length = {arrayTemp.Length}");
-
-string[] arrayFinal = new string[k];
-i = 0;
-while (i < k)
-{
-    arrayFinal[i] = arrayTemp[i];
-    i++;
-}
+int d = n - k;
+Array.Resize(ref arrayFinal, arrayFinal.Length - d);
 
 if (k == 0)
     Console.WriteLine("there is nothing less or equal to 3 symbols");
